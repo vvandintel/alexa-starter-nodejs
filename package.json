@@ -1,0 +1,25 @@
+{
+  "name": "alexa-starter-nodejs",
+  "version": "1.0.0",
+  "description": "NodeJS starter kit for Alexa Lambda function",
+  "repository": "https://github.com/vvandintel/alexa-starter-nodejs.git",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm prune && rm -rf build && mkdir build && cp -r node_modules build && cd src && cp -r . * ../build && cd ../build && zip -rm fantasy-skill.zip . *"
+  },
+  "author": "Vincent P. Van Dintel",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "dependencies": {
+    "alexa-sdk": "^1.0.11",
+    "bluebird": "^3.5.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  }
+}
